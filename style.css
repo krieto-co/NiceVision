@@ -408,6 +408,63 @@ h1, h2, h3, h4, h5, h6, .brand-text {
   z-index: -1;
 }
 
+/* ================= GENERATIONS SECTION ================= */
+.generations-section {
+  position: relative;
+  background-color: var(--color-bg-subtle);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.generations-img-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+.generations-img-card {
+  position: relative;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  border: 5px solid #FFFFFF;
+  box-shadow: var(--shadow-lg);
+  transition: transform var(--transition-speed) ease;
+}
+
+.generations-img-card:hover {
+  transform: translateY(-4px);
+}
+
+.generations-main-img {
+  max-height: 440px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
+}
+
+.generations-floating-badge {
+  position: absolute;
+  bottom: -18px;
+  right: 20px;
+  background: #FFFFFF;
+  border-radius: 1rem;
+  border: 1.5px solid var(--color-border);
+  box-shadow: var(--shadow-md);
+  z-index: 2;
+  min-width: 150px;
+}
+
+.generations-backdrop-shape {
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(30, 92, 49, 0.15) 0%, rgba(43, 124, 163, 0.15) 100%);
+  border-radius: 1.75rem;
+  z-index: -1;
+}
+
 /* ================= ABOUT SECTION ================= */
 .about-section {
   position: relative;
