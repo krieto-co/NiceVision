@@ -1117,7 +1117,7 @@ h1, h2, h3, h4, h5, h6, .brand-text {
 
 
 /* ADDTIONAL CSS */
-.social-link {
+/* .social-link {
   width: 64px;
   height: 64px;
   display: inline-flex;
@@ -1128,6 +1128,25 @@ h1, h2, h3, h4, h5, h6, .brand-text {
   border: 1px solid #dee2e6;
   color: var(--navy, #0b2545);
   font-size: 1.75rem;
+  transition: all 0.3s ease;
+}
+.social-link:hover {
+  background: var(--navy, #0b2545);
+  color: #fff;
+  transform: translateY(-3px);
+} */
+
+.social-link {
+  width: 48px;
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid #dee2e6;
+  color: var(--navy, #0b2545);
+  font-size: 1.25rem;
   transition: all 0.3s ease;
 }
 .social-link:hover {
