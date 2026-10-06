@@ -893,57 +893,118 @@ h1, h2, h3, h4, h5, h6, .brand-text {
 /* ================= RESPONSIVE BREAKPOINTS ================= */
 /* Mobile & Tablet Navigation (<992px) */
 @media (max-width: 991.98px) {
+  .brand-navbar {
+    padding-top: 0.65rem;
+    padding-bottom: 0.65rem;
+  }
+
   .brand-navbar .container {
     position: relative;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: space-between;
+    min-height: 44px;
   }
 
   .brand-navbar .navbar-brand {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    margin: 0;
-    max-width: calc(100% - 110px);
+    position: static !important;
+    transform: none !important;
+    left: auto !important;
+    top: auto !important;
+    margin: 0 auto !important;
+    padding: 0;
+    max-width: calc(100% - 90px);
+    display: flex;
+    align-items: center;
     justify-content: center;
-    text-align: center;
-    z-index: 5;
+    z-index: 1;
   }
 
-  .brand-navbar .navbar-toggler {
-    margin-left: auto;
-    z-index: 10;
-  }
-
-  .brand-navbar .navbar-collapse {
-    width: 100%;
-    flex-basis: 100%;
-    margin-top: 0.75rem;
-  }
-}
-
-/* Mobile (<576px) */
-@media (max-width: 575.98px) {
-  .brand-navbar {
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-  }
-
-  .brand-navbar .container {
-    min-height: 46px;
+  .brand-navbar .navbar-brand::before,
+  .brand-navbar .navbar-brand::after {
+    display: none !important;
   }
 
   .brand-logo-img {
-    height: 44px !important;
-    max-height: 44px !important;
+    height: 42px !important;
+    max-height: 42px !important;
     width: auto !important;
-    max-width: 190px !important;
+    max-width: 180px !important;
     object-fit: contain;
     display: block;
     margin: 0 auto;
   }
 
+  .brand-navbar .navbar-toggler {
+    position: absolute !important;
+    top: 0 !important;
+    right: 0.5rem !important;
+    bottom: auto !important;
+    transform: none !important;
+    height: 42px !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    margin: 0 !important;
+    padding: 0.35rem 0.55rem !important;
+    z-index: 10;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 0.5rem;
+    background: transparent;
+  }
+
+  .brand-navbar .navbar-toggler:focus {
+    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25);
+  }
+
+  .brand-navbar .navbar-collapse {
+    width: 100% !important;
+    flex-basis: 100% !important;
+    margin-top: 0.75rem;
+    padding-top: 1rem;
+    padding-bottom: 0.75rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+  }
+
+  .brand-navbar .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    margin-bottom: 0.75rem !important;
+  }
+
+  .brand-navbar .nav-link {
+    display: inline-block;
+    padding: 0.6rem 1.25rem !important;
+    font-size: 1.15rem;
+  }
+
+  .brand-navbar .nav-link::after {
+    bottom: 2px;
+  }
+
+  .brand-navbar .navbar-collapse .d-flex {
+    width: 100%;
+    margin-top: 0.5rem;
+    justify-content: center;
+  }
+
+  .brand-navbar .btn-call-cta {
+    width: 100%;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    padding: 0.85rem 1.25rem;
+    font-size: 1.15rem;
+    margin-top: 0.25rem;
+  }
+}
+
+/* Mobile (<576px) */
+@media (max-width: 575.98px) {
   .footer-logo-img {
     height: 42px !important;
     max-height: 42px !important;
@@ -973,35 +1034,10 @@ h1, h2, h3, h4, h5, h6, .brand-text {
     margin-top: 1rem;
     width: 100%;
   }
-
-  .btn-call-cta {
-    width: 100%;
-    justify-content: center;
-  }
 }
 
 /* Extra Small Mobile (<380px) */
 @media (max-width: 379.98px) {
-  .brand-navbar {
-    padding-top: 0.55rem;
-    padding-bottom: 0.55rem;
-  }
-
-  .brand-navbar .container {
-    min-height: 40px;
-  }
-
-  .brand-navbar .navbar-brand {
-    max-width: calc(100% - 90px);
-  }
-
-  .brand-logo-img {
-    height: 36px !important;
-    max-height: 36px !important;
-    width: auto !important;
-    max-width: 155px !important;
-  }
-
   .footer-logo-img {
     height: 36px !important;
     max-height: 36px !important;
@@ -1161,58 +1197,3 @@ h1, h2, h3, h4, h5, h6, .brand-text {
 
 
 
-
-@media (max-width: 991.98px) {
-  .brand-navbar {
-    padding-top: 0.6rem;
-    padding-bottom: 0.6rem;
-  }
-
-  .brand-navbar .container {
-    position: relative;
-    justify-content: center;
-  }
-
-  .brand-logo-img {
-    height: 42px !important;
-    max-height: 42px !important;
-    max-width: 180px !important;
-  }
-
-  .brand-navbar .navbar-brand {
-    position: static !important;
-    transform: none !important;
-    margin: 0 auto;
-  }
-
-  .brand-navbar .navbar-brand::before,
-  .brand-navbar .navbar-brand::after {
-    display: none !important;
-  }
-
-  .brand-navbar .navbar-toggler {
-    position: absolute;
-    top: 50%;
-    right: 0.75rem;
-    transform: translateY(-50%);
-  }
-
-  .brand-navbar .navbar-collapse {
-    width: 100%;
-    flex-basis: 100%;
-    padding: 1rem 0 0.5rem;
-    margin-top: 0.6rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-    text-align: center;
-  }
-
-  .brand-navbar .nav-link {
-    padding: 0.7rem 0;
-  }
-
-  .brand-navbar .btn-call-cta {
-    width: 100%;
-    justify-content: center;
-    padding: 0.75rem 1rem;
-  }
-}
