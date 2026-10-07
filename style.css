@@ -1101,6 +1101,16 @@ h1, h2, h3, h4, h5, h6, .brand-text {
   .section-subtitle {
     font-size: 1.15rem;
   }
+
+  .follow-us-title {
+    font-size: 1.75rem;
+  }
+
+  .social-link {
+    width: 68px;
+    height: 68px;
+    font-size: 2.0rem;
+  }
 }
 
 /* Extra Small Mobile (<380px) */
@@ -1233,43 +1243,71 @@ h1, h2, h3, h4, h5, h6, .brand-text {
 
 
 
-/* ADDTIONAL CSS */
-/* .social-link {
-  width: 64px;
-  height: 64px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background: #fff;
-  border: 1px solid #dee2e6;
-  color: var(--navy, #0b2545);
-  font-size: 1.75rem;
-  transition: all 0.3s ease;
+/* Follow Us & Social Links */
+.follow-us-title {
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-size: clamp(1.85rem, 3.2vw, 2.35rem);
+  color: var(--color-navy);
+  letter-spacing: -0.015em;
 }
-.social-link:hover {
-  background: var(--navy, #0b2545);
-  color: #fff;
-  transform: translateY(-3px);
-} */
 
 .social-link {
-  width: 62px;
-  height: 62px;
+  width: 80px;
+  height: 80px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: #fff;
-  border: 1px solid #dee2e6;
-  color: var(--navy, #0b2545);
-  font-size: 1.25rem;
-  transition: all 0.3s ease;
+  background: #FFFFFF;
+  border: 2px solid rgba(32, 99, 143, 0.18);
+  color: var(--color-navy);
+  font-size: 2.35rem;
+  box-shadow: 0 6px 20px rgba(32, 99, 143, 0.12);
+  transition: all var(--transition-speed) var(--transition-ease);
+  text-decoration: none;
 }
+
+.social-link i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.35rem;
+  line-height: 1;
+  transition: transform var(--transition-speed) ease;
+}
+
 .social-link:hover {
-  background: var(--navy, #0b2545);
-  color: #fff;
-  transform: translateY(-3px);
+  transform: translateY(-5px) scale(1.08);
+  box-shadow: 0 12px 28px rgba(32, 99, 143, 0.28);
+}
+
+.social-link:hover i {
+  transform: scale(1.1);
+}
+
+.social-link.social-facebook:hover,
+.social-link[aria-label="Facebook"]:hover {
+  background: #1877F2;
+  border-color: #1877F2;
+  color: #FFFFFF !important;
+  box-shadow: 0 12px 28px rgba(24, 119, 242, 0.45);
+}
+
+.social-link.social-instagram:hover,
+.social-link[aria-label="Instagram"]:hover {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  border-color: #d6249f;
+  color: #FFFFFF !important;
+  box-shadow: 0 12px 28px rgba(214, 36, 159, 0.45);
+}
+
+.social-link.social-whatsapp:hover,
+.social-link[aria-label="WhatsApp"]:hover {
+  background: #25D366;
+  border-color: #25D366;
+  color: #FFFFFF !important;
+  box-shadow: 0 12px 28px rgba(37, 211, 102, 0.45);
 }
 
 
