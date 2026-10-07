@@ -854,8 +854,40 @@ h1, h2, h3, h4, h5, h6, .brand-text {
 
 .contact-section a[href^="tel:"],
 .contact-section a[href^="mailto:"] {
-  font-size: 1.25rem;
-  font-weight: 700;
+  font-size: 1.35rem;
+  font-weight: 800;
+}
+
+.contact-card-value {
+  font-family: var(--font-heading);
+  font-size: clamp(1.4rem, 2.5vw, 1.7rem);
+  font-weight: 850;
+  color: var(--color-navy) !important;
+  line-height: 1.35;
+  letter-spacing: -0.015em;
+  display: inline-block;
+  word-break: break-word;
+  transition: color var(--transition-speed) ease, transform var(--transition-speed) ease;
+}
+
+.feature-card:hover .contact-card-value {
+  color: var(--color-green) !important;
+}
+
+.contact-section .feature-card {
+  transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease, border-color var(--transition-speed) ease;
+}
+
+.contact-section .feature-card:hover {
+  border-color: var(--color-green) !important;
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md) !important;
+}
+
+.contact-section .feature-icon-box {
+  width: 62px;
+  height: 62px;
+  font-size: 1.65rem;
 }
 
 .contact-icon {
@@ -1160,6 +1192,27 @@ h1, h2, h3, h4, h5, h6, .brand-text {
   
   .brand-navbar .nav-link {
     font-size: 1.18rem;
+  }
+
+  .contact-section .feature-card {
+    padding: 2.75rem 2.25rem !important;
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1.25rem !important;
+  }
+
+  .contact-section .feature-icon-box {
+    width: 68px;
+    height: 68px;
+    font-size: 1.85rem;
+    margin-bottom: 1.25rem !important;
+  }
+
+  .contact-section .contact-card-value {
+    font-size: 1.55rem;
   }
 }
 
